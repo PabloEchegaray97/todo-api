@@ -81,4 +81,30 @@ http://localhost:3000/api-docs
 - Filtrado de tareas por estado: `GET /api/tasks?estado=pendiente`
 - Ordenación de tareas por fecha límite: `GET /api/tasks?ordenarPorFecha=true`
 - Validaciones en todas las operaciones
-- Interfaz de Swagger para probar los endpoints: `http://localhost:3000/api-docs` 
+- Interfaz de Swagger para probar los endpoints: `http://localhost:3000/api-docs`
+
+## Documentación con Swagger
+
+La API está completamente documentada utilizando Swagger UI, lo que permite:
+
+### Funcionalidades de Swagger
+- **Interfaz interactiva**: Prueba directamente todos los endpoints sin necesidad de herramientas externas como Postman
+- **Documentación en tiempo real**: La documentación siempre está actualizada con el código
+- **Exploración de modelos**: Visualiza la estructura completa de los modelos (Task, Sprint, Backlog)
+- **Ejemplos incluidos**: Cada endpoint incluye ejemplos de solicitudes y respuestas
+
+### Cómo usar Swagger UI
+1. Iniciar el servidor con `npm run dev`
+2. Abrir tu navegador y e ir a: `http://localhost:3000/api-docs`
+3. Explorar las diferentes secciones organizadas por recursos (tasks, sprints, backlog)
+4. Para probar un endpoint:
+   - Seleccionar el endpoint 
+   - Hacer click en el botón "Try it out"
+   - Completar los parámetros necesarios (si los hay)
+   - Hacer click en "Execute"
+   - Revisar la respuesta en la sección "Response body"
+
+### Modelos documentados
+- **Task**: Modelo para tareas con título, descripción, estado, fecha límite y color
+- **Sprint**: Modelo para sprints con nombre, fechas de inicio/cierre y lista de tareas
+- **Backlog**: Modelo para el backlog que contiene tareas no asignadas a sprints 
